@@ -43,7 +43,7 @@ const handleQuit=()=>{
     <div className='question'>
       <h1>Question {currQues + 1} </h1>
       <div className='singleQuestion'>
-        <h2>{questions[currQues].question}</h2>
+        <h2 dangerouslySetInnerHTML={{__html: questions[currQues].question}}/>
         <div className='options'>
             {error && <ErrorMessage>{error}</ErrorMessage>}
             {
